@@ -1,1 +1,11 @@
-
+{
+    "endpoint": "your-aws-iot-endpoint.amazonaws.com",
+    "client_id": "sensor_data_publisher",
+    "certificates": {
+      "certificate": "path/to/certificate.pem.crt",
+      "private_key": "path/to/private.pem.key",
+      "ca_certificate": "path/to/AmazonRootCA1.pem"
+    },
+    "topic": "iot/sensor_data"
+  }
+  

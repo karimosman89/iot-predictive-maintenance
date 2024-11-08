@@ -1,1 +1,13 @@
+# configs/spark_config.yaml
+
+spark:
+  app_name: "SensorDataProcessing"
+  master: "local[*]"             # Use all available cores
+  config:
+    spark.executor.memory: "4g"  # Memory per executor
+    spark.executor.cores: 2      # Number of cores per executor
+    spark.driver.memory: "2g"    # Memory allocated to the driver
+    spark.sql.shuffle.partitions: 4  # Number of partitions for shuffle
+    spark.streaming.backpressure.enabled: True
+    spark.streaming.kafka.maxRatePerPartition: 1000
 

@@ -1,1 +1,13 @@
+# configs/kafka_config.yaml
+
+kafka:
+  bootstrap_servers: "localhost:9092"
+  topic: "sensor_data"
+  producer:
+    retries: 5                  # Number of retries for Kafka producer
+    acks: "all"                  # Producer acknowledgments
+  consumer:
+    group_id: "sensor_data_group"  # Consumer group ID
+    auto_offset_reset: "earliest"  # Start reading at the beginning if no offset exists
+    enable_auto_commit: True       # Whether to commit offsets automatically
 

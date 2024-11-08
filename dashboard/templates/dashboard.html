@@ -1,1 +1,20 @@
-
+<!-- dashboard/templates/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>IoT Predictive Maintenance Dashboard</title>
+</head>
+<body>
+    <h1>Real-Time Sensor Data</h1>
+    <div id="sensor-data"></div>
+    <script>
+        setInterval(() => {
+            fetch('/live_data')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("sensor-data").innerHTML = JSON.stringify(data);
+                });
+        }, 2000);
+    </script>
+</body>
+</html>
