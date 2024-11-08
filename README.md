@@ -4,7 +4,6 @@ This repository implements a comprehensive IoT Predictive Maintenance System usi
 
 ## Table of Contents
 - [Overview](#overview)
-- [Project Structure](#project-structure)
 - [Key Components](#key-components)
   - [AWS IoT Integration](#aws-iot-integration)
   - [Kafka Streaming](#kafka-streaming)
@@ -27,30 +26,6 @@ This IoT Predictive Maintenance System is designed to monitor sensor data from c
 3. Connects to AWS IoT Core for device management.
 4. Uses machine learning models for predictive analytics, tracking experiments and versions with MLflow.
 
-## Project Structure
-
-The repository follows a modular structure for scalability and clarity.
-
-  plaintext
-├── configs/
-│   ├── kafka_config.yaml             # Kafka configuration for producer and consumer
-│   ├── spark_config.yaml             # Spark configuration settings
-│   └── model_config.yaml             # Model hyperparameters and training configurations
-│
-├── data/
-│   ├── raw_data.csv                  # Raw sensor data (if available)
-│   └── processed/                    # Directory for processed data files
-│
-├── scripts/
-│   ├── aws_iot_config.json           # Configuration for AWS IoT Core connection
-│   ├── kafka_producer.py             # Kafka producer script for streaming sensor data
-│   ├── preprocess_data.py            # Script to preprocess data for model training
-│   └── mlflow_experiment.py          # MLflow script to track experiments and model metrics
-│
-├── README.md                         # Project documentation
-└── requirements.txt                  # Python dependencies
-
-
 
 ## Key Components
 
@@ -61,7 +36,7 @@ The AWS IoT Core configuration (aws_iot_config.json) enables cloud connectivity 
 **Kafka Streaming**
 The kafka_producer.py script generates and streams simulated sensor data (e.g., temperature, vibration, pressure) to a Kafka topic. Kafka serves as the data backbone for processing and analytics, enabling scalable and real-time data handling.
 
-###Data Preprocessing
+### Data Preprocessing
 
 The preprocess_data.py script cleans and prepares raw data, making it suitable for model training. Preprocessing steps include:
 
@@ -69,7 +44,7 @@ The preprocess_data.py script cleans and prepares raw data, making it suitable f
 **Scaling:** Standardizes data for consistent model performance.
 **Feature engineering:** Adds or transforms features based on analysis requirements.
 
-###Machine Learning with MLflow
+### Machine Learning with MLflow
 The mlflow_experiment.py script handles model training, tracking, and version control with MLflow. Key features include:
 
 **Experiment logging:** Tracks model parameters, metrics, and training details.
@@ -87,18 +62,20 @@ Ensure you have the following installed:
 **MLflow for experiment tracking**
 
 ### Configuration
+
 1. Clone the Repository:
 
 
-      git clone https://github.com/karimosman89/iot-predictive-maintenance.git
-      cd iot-predictive-maintenance
+           git clone https://github.com/karimosman89/iot-predictive-maintenance.git
+   
+           cd iot-predictive-maintenance
 
-2. Install Dependencies:
+3. Install Dependencies:
 
 
              pip install -r requirements.txt
 
-3. Configure Services:
+4. Configure Services:
 
 Update the aws_iot_config.json file with AWS IoT Core details.
 Modify the configs/kafka_config.yaml and configs/spark_config.yaml to match your Kafka and Spark environments.
@@ -148,4 +125,4 @@ This project utilizes open-source libraries and tools, including Kafka, Spark, a
 - **Contributing**: Invites others to contribute, making it clear how they can get involved.
 - **License**: States the license under which the code is shared.
 
-This `README.md` serves as a comprehensive guide for users to understand, set up, and run the 
+
