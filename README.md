@@ -31,7 +31,7 @@ This IoT Predictive Maintenance System is designed to monitor sensor data from c
 
 The repository follows a modular structure for scalability and clarity.
 
-```plaintext
+  plaintext
 ├── configs/
 │   ├── kafka_config.yaml             # Kafka configuration for producer and consumer
 │   ├── spark_config.yaml             # Spark configuration settings
@@ -51,9 +51,10 @@ The repository follows a modular structure for scalability and clarity.
 └── requirements.txt                  # Python dependencies
 
 
+
 ## Key Components
 
- ###AWS IoT Integration
+### AWS IoT Integration
 
 The AWS IoT Core configuration (aws_iot_config.json) enables cloud connectivity for managing IoT devices and sending/receiving data securely. This part supports real-time data management and monitoring through AWS's secure infrastructure.
 
@@ -75,9 +76,9 @@ The mlflow_experiment.py script handles model training, tracking, and version co
 **Model registry:** Saves models in MLflow for easy retrieval and deployment.
 **Hyperparameter management:** Uses configurations from model_config.yaml for model consistency and reproducibility.
 
-##Setup Instructions
+## Setup Instructions
 
-###Requirements
+### Requirements
 Ensure you have the following installed:
 
 **Python 3.8+**
@@ -85,7 +86,7 @@ Ensure you have the following installed:
 **Spark for distributed processing**
 **MLflow for experiment tracking**
 
-###Configuration
+### Configuration
 1. Clone the Repository:
 
 
@@ -104,7 +105,7 @@ Modify the configs/kafka_config.yaml and configs/spark_config.yaml to match your
 Set model parameters in configs/model_config.yaml for training and evaluation.
 
 
-##Usage
+## Usage
 1. Start Kafka Producer: Run the kafka_producer.py script to start streaming sensor data to Kafka.
 
 
